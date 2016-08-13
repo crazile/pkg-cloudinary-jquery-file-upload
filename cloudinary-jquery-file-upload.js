@@ -3935,7 +3935,7 @@ var extend = function(child, parent) { for (var key in parent) { if (hasProp.cal
         return jQuery(e.target).trigger('cloudinarydone', data);
       });
       this.bind('fileuploadsend', function(e, data) {
-        data.headers = $.extend({}, data.headers, {
+        data.headers = jQuery.extend({}, data.headers, {
           'X-Unique-Upload-Id': (Math.random() * 10000000000).toString(16)
         });
         return true;
